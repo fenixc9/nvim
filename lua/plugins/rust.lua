@@ -100,6 +100,13 @@ return {
           },
           settings = {
             ["rust-analyzer"] = {
+              inlayHints = {
+                closureReturnTypeHints = true,
+                chainingHints = true,
+                parameterHints = true,
+                typeHints = true,
+                lifetimeElisionHints = { enable = true, useParameterNames = true },
+              },
               cargo = {
                 allFeatures = true,
                 loadOutDirsFromCheck = true,
