@@ -97,6 +97,7 @@ return {
             { "K", "<cmd>RustHoverActions<cr>", desc = "Hover Actions (Rust)" },
             { "<leader>cR", "<cmd>RustCodeAction<cr>", desc = "Code Action (Rust)" },
             { "<leader>dr", "<cmd>RustDebuggables<cr>", desc = "Run Debuggables (Rust)" },
+            { "<leader>cc", "<cmd>RustRunnables<cr>", desc = "Run Runnables (Rust)" },
           },
           settings = {
             ["rust-analyzer"] = {
