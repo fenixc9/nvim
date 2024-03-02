@@ -92,6 +92,9 @@ return {
     opts = {
       servers = {
         -- Ensure mason installs the server
+        tsserver = {},
+        pyright = {},
+        jsonls = {},
         rust_analyzer = {
           keys = {
             { "K", "<cmd>RustHoverActions<cr>", desc = "Hover Actions (Rust)" },
@@ -200,7 +203,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
+        vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml", "javascript", "html", "typescript", "css" })
         opts.highlight = {
           enable = true,
           vim.api.nvim_set_hl(0, "@lsp.type.interface", { fg = "#2779f5" }),
@@ -280,17 +283,11 @@ return {
       if type(opts.ensure_installed) == "table" then
         vim.list_extend(opts.ensure_installed, { "codelldb" })
       end
-      opts.log_level = vim.log.levels.DEBUG
+      opts.log_level = vim.log.levels.INFO
       opts.providers = {
         -- omitting registry-api provider, because it connects to https://api.mason-registry.dev/api/github/mason-org/mason-registry/releases/latest
         "mason.providers.client.golang",
       }
-      --      opts.github = {
-      --        download_url_template = 'https://proxy.corporate.com/generic-github-releases/%s/releases/download/%s/%s',
-      --      }
-      --      opts.registry = {
-      --        "github:mason-org/mason-registry@latest"
-      --      }
     end,
   },
 }

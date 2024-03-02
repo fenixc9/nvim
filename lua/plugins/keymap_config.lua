@@ -1,9 +1,9 @@
 return {
   {
-    "jdhao/better-escape.vim"
+    "jdhao/better-escape.vim",
   },
 
   {
-    'tpope/vim-commentary'
-  }
+    "tpope/vim-commentary",
+  },
 }

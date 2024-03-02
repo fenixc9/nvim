@@ -3,4 +3,3 @@
 -- Add any additional keymaps here
 --
 local map = vim.api.nvim_set_keymap
-map("i", "ii", "esc", {})
