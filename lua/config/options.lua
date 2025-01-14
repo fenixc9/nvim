@@ -3,7 +3,6 @@
 -- Add any additional options here
 --
 lualine_x = {
-  "copilot",
   "filetype",
   "fileformat",
   "encoding",

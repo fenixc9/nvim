@@ -9,11 +9,11 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- copilot 状态
-  { "ofseed/copilot-status.nvim" },
+  -- -- copilot 状态
+  -- { "ofseed/copilot-status.nvim" },
 
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
+  -- -- add gruvbox
+  -- { "ellisonleao/gruvbox.nvim" },
 
 
 }
