@@ -1,7 +1,43 @@
 return {
-  "neo-tree.nvim",
+  "nvim-neo-tree/neo-tree.nvim",
+  lazy = true,
   opts = {
+    sources = {
+      "filesystem", -- 只启用文件系统源
+      -- 'buffers',  -- 禁用 buffer 源
+      -- 'git_status', -- 可选：禁用 git 状态源
+    },
+    filters = {
+      show_hidden = true,
+      hide_dotfiles = false, -- 不隐藏以点开头的文件
+      hide_gitignored = false, -- 不隐藏 .gitignore 中忽略的文件
+    },
+    enable_git_status = true,
+    enable_diagnostics = false,
     default_component_configs = {
+      window = {
+        position = "left",
+        width = 40,
+        mapping_options = {
+          noremap = true,
+          nowait = true,
+        },
+        mappings = {
+          ["<C-n>"] = "move_cursor_down",
+          ["<space>"] = {
+            "toggle_node",
+            nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
+          },
+          ["P"] = {
+            "toggle_preview",
+            config = {
+              use_float = false,
+              -- use_image_nvim = true,
+              -- title = 'Neo-tree Preview',
+            },
+          },
+        },
+      },
       indent = {
         expander_collapsed = "",
         expander_expanded = "",
@@ -32,32 +68,9 @@ return {
         },
       },
       file_size = {
-        enabled = true,
         required_width = 64, -- min width of window required to show this column
-      },
-      type = {
         enabled = true,
-        required_width = 122, -- min width of window required to show this column
       },
-      last_modified = {
-        enabled = true,
-        required_width = 120, -- min width of window required to show this column
-      },
-      created = {
-        enabled = true,
-        required_width = 110, -- min width of window required to show this column
-      },
-      symlink_target = {
-        enabled = false,
-      },
-    },
-    file_size = {
-      enabled = true,
-      required_width = 64, -- min width of window required to show this column
-    },
-    type = {
-      enabled = true,
-      required_width = 122, -- min width of window required to show this column
     },
   },
 }

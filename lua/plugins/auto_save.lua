@@ -9,7 +9,8 @@ return {
           return "AutoSave"
         end,
 
-        dim = 0.18, -- dim the color of `message`
+        dim = 0.1, -- dim the color of `message`
+
         cleaning_interval = 250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
       },
 
@@ -21,8 +22,8 @@ return {
         modifiable = true,
       },
       write_all_buffers = false,
-      on_off_commands = true,
-      clean_command_line_interval = 2500,
+      on_off_commands = false,
+      clean_command_line_interval = 0,
       debounce_delay = 500,
       callbacks = { -- functions to be executed at different intervals
         enabling = nil, -- ran when enabling auto-save
