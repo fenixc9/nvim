@@ -5,7 +5,7 @@ return {
     sources = {
       "filesystem", -- 只启用文件系统源
       -- 'buffers',  -- 禁用 buffer 源
-      -- 'git_status', -- 可选：禁用 git 状态源
+      "git_status", -- 可选：禁用 git 状态源
     },
     filters = {
       show_hidden = true,
@@ -53,6 +53,7 @@ return {
         highlight = "NeoTreeFileIcon",
       },
       git_status = {
+        refresh_interval = 2000,
         symbols = {
           -- Change type
           added = "A", -- or "✚", but this is redundant info if you use git_status_colors on the name
