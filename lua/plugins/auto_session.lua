@@ -9,7 +9,7 @@ return {
     ---@type AutoSession.Config
     opts = {
       suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "~/project/leetcode/" },
-      auto_restore_last_session = true,
+      auto_restore_last_session = false,
       auto_session_enabled = true, -- 启用自动保存和恢复
       auto_save_enabled = true, -- 自动保存会话
       auto_restore_enabled = true, -- 自动恢复会话
