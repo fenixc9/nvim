@@ -4,6 +4,7 @@ return {
     opts = {
       servers = {
         -- Ensure mason installs the server
+        gopls = {},
         tsserver = {},
         pyright = {},
         jsonls = {},
@@ -22,6 +23,9 @@ return {
                 parameterHints = true,
                 typeHints = true,
                 lifetimeElisionHints = { enable = true, useParameterNames = true },
+              },
+              cache = {
+                path = "/tmp/cache", -- 替换为你的缓存路径
               },
               cargo = {
                 allFeatures = true,

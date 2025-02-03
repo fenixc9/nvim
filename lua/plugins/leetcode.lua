@@ -8,7 +8,7 @@ return {
 
     -- optional
     "nvim-treesitter/nvim-treesitter",
-    "nvim-tree/nvim-web-devicons",
+    -- "nvim-tree/nvim-web-devicons",
   },
   opts = {
     -- configuration goes here
