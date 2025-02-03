@@ -26,3 +26,9 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     -- vim.fn.system('im-select xkb:us::eng')  -- Linux
   end,
 })
+vim.api.nvim_create_autocmd("VimLeave", {
+  pattern = "*",
+  callback = function()
+    os.os.execute("rm -rf ~/.local/share/nvim/blink/cmp/fuzzy.db")
+  end,
+})
