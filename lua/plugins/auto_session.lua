@@ -15,11 +15,8 @@ return {
       auto_restore_enabled = true, -- 自动恢复会话
       auto_session_suppress_dirs = { "~/project/leetcode/", "/tmp" }, -- 忽略的目录
       auto_session_create_enabled = true, -- 允许自动创建会话
-      auto_session_enable_last_session = false, -- 即使指定了文件或目录也恢复会话
-      pre_save_cmds = {
-        [[tabdo NvimTreeClose]],
-        [[tabdo cclose]],
-      },
+      auto_session_enable_last_session = true, -- 即使指定了文件或目录也恢复会话
+      pre_save_cmds = {},
     },
   },
 }

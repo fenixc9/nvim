@@ -6,6 +6,9 @@ vim.api.nvim_set_keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", {
 vim.api.nvim_set_keymap("i", "<C-z>", "<C-o>u", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", "<C-u>", { noremap = true, silent = true })
+-- 修改 Go 常量的颜色
+vim.api.nvim_set_hl(0, "goConstant", { fg = "#FFFF00" })
+vim.api.nvim_set_hl(0, "@constant", { fg = "#FFFF00" })
 -- vim.g.clipboard = {
 --   name = "OSC 52",
 --   copy = {
@@ -26,9 +29,9 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     -- vim.fn.system('im-select xkb:us::eng')  -- Linux
   end,
 })
-vim.api.nvim_create_autocmd("VimLeave", {
-  pattern = "*",
-  callback = function()
-    os.os.execute("rm -rf ~/.local/share/nvim/blink/cmp/fuzzy.db")
-  end,
-})
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--   pattern = "*",
+--   callback = function()
+--     os.execute("rm -rf ~/.local/share/nvim/blink/cmp/fuzzy.db")
+--   end,
+-- })

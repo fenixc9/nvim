@@ -6,7 +6,9 @@ return {
         -- Ensure mason installs the server
         gopls = {},
         tsserver = {},
-        pyright = {},
+        pyright = {
+          typeCheckingMode = "strict",
+        },
         jsonls = {},
         rust_analyzer = {
           keys = {
