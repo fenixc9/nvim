@@ -9,17 +9,17 @@ vim.api.nvim_set_keymap("n", "<C-e>", "<C-u>", { noremap = true, silent = true }
 -- 修改 Go 常量的颜色
 vim.api.nvim_set_hl(0, "goConstant", { fg = "#FFFF00" })
 vim.api.nvim_set_hl(0, "@constant", { fg = "#FFFF00" })
--- vim.g.clipboard = {
---   name = "OSC 52",
---   copy = {
---     ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
---     ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
---   },
---   paste = {
---     ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
---     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
---   },
--- }
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}
 -- 切换到 Normal 模式时自动切换为英文输入法
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = "*",

@@ -20,11 +20,11 @@ return {
           settings = {
             ["rust-analyzer"] = {
               inlayHints = {
-                closureReturnTypeHints = true,
-                chainingHints = true,
-                parameterHints = true,
-                typeHints = true,
-                lifetimeElisionHints = { enable = true, useParameterNames = true },
+                -- closureReturnTypeHints = true,
+                -- chainingHints = true,
+                -- parameterHints = true,
+                -- typeHints = true,
+                -- lifetimeElisionHints = { enable = true, useParameterNames = true },
               },
               cache = {
                 path = "/tmp/cache", -- 替换为你的缓存路径
@@ -42,11 +42,11 @@ return {
               },
               procMacro = {
                 enable = true,
-                ignored = {
-                  ["async-trait"] = { "async_trait" },
-                  ["napi-derive"] = { "napi" },
-                  ["async-recursion"] = { "async_recursion" },
-                },
+                -- ignored = {
+                --   ["async-trait"] = { "async_trait" },
+                --   ["napi-derive"] = { "napi" },
+                --   ["async-recursion"] = { "async_recursion" },
+                -- },
               },
             },
           },
@@ -67,13 +67,7 @@ return {
           },
         },
       },
-      setup = {
-        rust_analyzer = function(_, opts)
-          local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
-          require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
-          return true
-        end,
-      },
+      setup = {},
     },
   },
 }
