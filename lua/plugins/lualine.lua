@@ -22,7 +22,7 @@ return {
 
     local opts = {
       options = {
-        theme = "auto",
+        theme = "material",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
       },
@@ -41,7 +41,7 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-          { "filetype", icon_only = false, separator = "->", padding = { left = 1, right = 0 } },
+          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           { LazyVim.lualine.pretty_path({ relative = "root", length = 20 }) },
         },
         lualine_x = {
@@ -95,7 +95,7 @@ return {
         },
         lualine_z = {
           function()
-            return " " .. os.date("%Y-%m-%d %R")
+            return "⏰" .. os.date("%Y-%m-%d %R")
           end,
         },
       },
