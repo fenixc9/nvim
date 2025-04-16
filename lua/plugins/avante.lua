@@ -5,14 +5,14 @@ return {
     lazy = false,
     version = false, -- set this if you want to always pull the latest change
     opts = {
-      provider = "siliconflow",
+      provider = "bailian",
       vendors = {
-        siliconflow = {
+        bailian = {
           __inherited_from = "openai",
           api_key_name = "OPENAI_API_KEY",
-          endpoint = "https://api.siliconflow.cn",
+          endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1",
           -- endpoint = "https://api.deepseek.com",
-          model = "Qwen/Qwen2.5-Coder-7B-Instruct",
+          model = "qwen2.5-coder-7b-instruct",
           -- model = "deepseek-coder",
         },
       },

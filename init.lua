@@ -34,8 +34,8 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 --   callback = function()
 --     os.execute("rm -rf ~/.local/share/nvim/blink/cmp/fuzzy.db")
 --   end,
--- })
 --
+-- })
 -- neovide配置
 if vim.g.neovide then
   -- vim.g.neovide_input_use_logo = 1
@@ -71,3 +71,5 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_particle_speed = 2
   vim.g.neovide_cursor_antialiasing = true
 end
+
+vim.api.nvim_set_hl(0, "Visual", { ctermbg = "LightBlue", fg = "#04475a", bg = "#1f6fBB" })
